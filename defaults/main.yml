@@ -1,0 +1,9 @@
+---
+gitbucket_home: /var/lib/gitbucket
+
+gitbucket_dir: /usr/share/gitbucket
+gitbucket_war_dir: "{{ gitbucket_dir }}/lib"
+gitbucket_war_file: "{{ gitbucket_war_dir }}/gitbucket.war"
+gitbucket_log_dir: /var/log/gitbucket
+
+gitbucket_jvm_opts: -Dmail.smtp.starttls.enable=true

@@ -1,0 +1,9 @@
+---
+# Which version of GitBucket to deploy
+gitbucket_version: 2.5
+
+# Specify GitBucket url
+# http://[gitbucket_host]:[gitbucket_port]/[gitbucket_prefix]
+gitbucket_host: localhost
+gitbucket_port: 8080
+gitbucket_prefix: ""

@@ -1,0 +1,34 @@
+---
+
+- name: Install libselinux-python
+  include: selinux.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Create directories for GitBucket
+  file: path={{ item }} state=directory
+  with_items:
+    - "{{ gitbucket_home }}"
+    - "{{ gitbucket_war_dir }}"
+    - "{{ gitbucket_log_dir }}"
+    
+- name: Download GitBucket war file
+  get_url: url=https://github.com/takezoe/gitbucket/releases/download/{{ gitbucket_version }}/gitbucket.war 
+          dest={{ gitbucket_war_file }}
+
+- name: Copy GitBucket conf file
+  template: src=gitbucket.conf.j2 dest={{ gitbucket_dir }}/gitbucket.conf
+  notify:
+    - restart gitbucket
+
+- name: Install GitBucket init script
+  copy: src=gitbucket.init dest=/etc/init.d/gitbucket mode=0755
+  notify:
+    - restart gitbucket
+
+- stat: path=/etc/init.d/gitbucket
+  register: init_script_file
+
+- name: Start GitBucket
+  service: name=gitbucket state=started enabled=yes
+  when: init_script_file.stat.exists
+

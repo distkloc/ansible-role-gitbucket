@@ -1,0 +1,14 @@
+---
+
+- name: Check if selinux is installed
+  command: getenforce
+  register: command_result
+  ignore_errors: True
+
+- name: Install libselinux-python
+  yum: name={{ item }}
+  with_items: 
+    - epel-release
+    - libselinux-python
+  when: command_result|success and command_result.stdout != 'Disabled'
+
