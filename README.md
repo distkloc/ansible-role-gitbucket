@@ -1,7 +1,7 @@
 Ansible Role GitBucket
 =========
 
-An ansible role installs [takezoe/gitbucket](takezoe/gitbucket) without servlet container on CentOS/Ubuntu.
+An ansible role installs [takezoe/gitbucket](https://github.com/takezoe/gitbucket) without servlet container on CentOS/Ubuntu.
 This role deploys minimum configration for GitBucket.
 
 Requirements
@@ -14,7 +14,7 @@ Role Variables
 
 #### Which version of GitBucket to deploy
 
-[Releases · takezoe/gitbucket](takezoe/gitbucket/releases)
+[Releases · takezoe/gitbucket](https://github.com/takezoe/gitbucket/releases)
 
 ```yml
 # vars/main.yml
