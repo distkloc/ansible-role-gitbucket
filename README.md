@@ -52,7 +52,7 @@ gitbucket_war_file: "{{ gitbucket_war_dir }}/gitbucket.war"
 
 #### GitBucket log directory
 
-```
+```yml
 # defaults/main.yml
 gitbucket_log_dir: /var/log/gitbucket
 ```
