@@ -71,7 +71,8 @@ Example Playbook
 ----------------
 
 ```yml
-- hosts: servers
+- hosts: all
+  sudo: yes
   roles:
      - { role: distkloc.gitbucket, gitbucket_host: gitbucket.example.com, gitbucket_port: 80  }
 ```
