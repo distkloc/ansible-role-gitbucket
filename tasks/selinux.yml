@@ -3,6 +3,7 @@
 - name: Check if selinux is installed
   command: getenforce
   register: command_result
+  changed_when: False
   ignore_errors: True
 
 - name: Install libselinux-python
