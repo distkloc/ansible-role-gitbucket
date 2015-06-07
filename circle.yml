@@ -8,7 +8,7 @@ dependencies:
   override:
     - docker info
     - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
-    - cd tests; docker build -t gitbucket ../
+    - docker build -t gitbucket .
     - mkdir -p ~/docker; docker save gitbucket > ~/docker/image.tar
 
 test:
