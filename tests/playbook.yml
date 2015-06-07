@@ -1,0 +1,7 @@
+---
+# This playbook deploys a standalone GitBuket. 
+
+- hosts: all
+
+  roles:
+    - gitbucket
