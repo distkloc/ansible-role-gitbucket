@@ -20,7 +20,7 @@ Role Variables
 
 ```yml
 # vars/main.yml
-gitbucket_version: 2.5
+gitbucket_version: 3.3
 ```
 
 #### Specify GitBucket URL
