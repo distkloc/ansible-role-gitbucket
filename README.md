@@ -1,6 +1,8 @@
 Ansible Role GitBucket
 =========
 
+[![build status](https://circleci.com/gh/distkloc/ansible-role-gitbucket.png?circle-token=cb7643144506b8ab32cbb9b44532e3fbc94ac3c5)](https://circleci.com/gh/distkloc/ansible-role-gitbucket)
+
 An ansible role installs [takezoe/gitbucket](https://github.com/takezoe/gitbucket) without servlet container on CentOS/Ubuntu.
 This role deploys minimum configration for GitBucket.
 
