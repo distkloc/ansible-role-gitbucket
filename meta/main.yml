@@ -111,11 +111,6 @@ galaxy_info:
   - web
 dependencies:
   - role: geerlingguy.java
-    java_packages: openjdk-7-jdk
-    when: ansible_os_family == 'Debian'
-  - role: geerlingguy.java
-    java_packages: java-1.7.0-openjdk
-    when: ansible_os_family == 'RedHat'
   # List your role dependencies here, one per line. Only
   # dependencies available via galaxy should be listed here.
   # Be sure to remove the '[]' above if you add dependencies
